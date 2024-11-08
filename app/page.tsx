@@ -3,25 +3,43 @@ import { ArrowRight, Loader2 } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#2B1B44] via-[#E87D93] to-[#F7A5A2] relative overflow-hidden">
-      {/* Navigation */}
-      <nav className="flex justify-between items-center p-6">
-        <div className="text-white font-bold text-2xl">LOREM</div>
-        <div className="text-white/70">vector/ eps.10</div>
-        <div className="flex gap-8 text-white">
-          <a href="#" className="hover:text-white/80 transition">Shop</a>
-          <a href="#" className="hover:text-white/80 transition">Account</a>
-          <a href="#" className="hover:text-white/80 transition">Story</a>
-          <a href="#" className="hover:text-white/80 transition">Blog</a>
-        </div>
-      </nav>
+    <main className="min-h-screen relative overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="object-cover w-full h-full"
+        >
+          <source src="/91598-628463753_medium.mp4" type="video/mp4" />
+        </video>
+        {/* Optional overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
+      
+      {/* Navigation Container */}
+      <div className="max-w-[1260px] mx-auto px-6 relative z-10">
+        {/* Navigation */}
+        <nav className="flex flex-col md:flex-row justify-between items-center py-6">
+          <div className="text-white font-bold text-2xl mb-4 md:mb-0">LOREM</div>
+          <div className="text-white/70 mb-4 md:mb-0">vector/ eps.10</div>
+          <div className="flex flex-wrap gap-4 md:gap-8 text-white justify-center">
+            <a href="#" className="hover:text-white/80 transition">Shop</a>
+            <a href="#" className="hover:text-white/80 transition">Account</a>
+            <a href="#" className="hover:text-white/80 transition">Story</a>
+            <a href="#" className="hover:text-white/80 transition">Blog</a>
+          </div>
+        </nav>
+      </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-6 mt-12 grid grid-cols-12 gap-8">
+      {/* Main Content - Updated for responsiveness */}
+      <div className="container mx-auto px-6 mt-12 grid grid-cols-1 md:grid-cols-12 gap-8 max-w-[1260px]">
         {/* Left Side */}
-        <div className="col-span-7 relative z-10">
-          {/* Side Numbers */}
-          <div className="absolute left-[-60px] top-0 h-full flex flex-col justify-between text-white/30">
+        <div className="col-span-1 md:col-span-7 relative z-10">
+          {/* Side Numbers - Hide on mobile */}
+          <div className="hidden md:flex absolute left-[-60px] top-0 h-full flex-col justify-between text-white/30">
             <div className="h-16 w-px bg-white/20 mx-auto"></div>
             <div className="writing-mode-vertical transform rotate-180 text-sm tracking-wider">
               Lorem Ipsum
@@ -40,7 +58,7 @@ export default function Home() {
 
           {/* Main Text Content */}
           <div className="space-y-8">
-            <h1 className="text-8xl font-bold">
+            <h1 className="text-5xl md:text-8xl font-bold">
               <span className="text-[#B6B1FF]">WEB</span>
               <br />
               <span className="text-white">DESIGN</span>
@@ -59,15 +77,21 @@ export default function Home() {
         </div>
 
         {/* Right Side */}
-        <div className="col-span-5 relative">
-          <div className="absolute right-0 top-0 text-[120px] font-thin text-white/90">
+        <div className="col-span-1 md:col-span-5 relative">
+          <div className="absolute right-0 top-0 text-[60px] md:text-[120px] font-thin text-white/90">
             <span>02</span>
             <span className="ml-4">03</span>
           </div>
           
           <div className="mt-32 space-y-6">
-            <div className="bg-black aspect-video rounded-lg flex items-center justify-center">
-              <Loader2 className="w-8 h-8 text-white animate-spin" />
+            <div className="bg-black aspect-video rounded-lg overflow-hidden">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/m_1NLHQojQs?start=752"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
             <h3 className="text-2xl font-bold text-white">LOREM IPSUM</h3>
             <p className="text-white/80">
@@ -84,12 +108,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute left-1/3 top-1/2 w-96 h-96 bg-[#4B69BD] rounded-full blur-3xl opacity-20 -translate-y-1/2"></div>
-      <div className="absolute right-1/4 bottom-1/4 w-64 h-64 bg-[#B6B1FF] rounded-full blur-3xl opacity-20"></div>
-      
-      {/* Dots Pattern */}
-      <div className="absolute inset-0 grid grid-cols-12 gap-8 pointer-events-none">
+      {/* Dots Pattern - Adjust for smaller screens */}
+      <div className="absolute inset-0 grid grid-cols-6 md:grid-cols-12 gap-4 md:gap-8 pointer-events-none">
         {[...Array(156)].map((_, i) => (
           <div key={i} className="w-1 h-1 bg-white/10 rounded-full"></div>
         ))}
