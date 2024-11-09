@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Loader2 } from "lucide-react";
+import { ArrowRight, Loader2, Search } from "lucide-react";
 
 export default function Home() {
   return (
@@ -23,13 +23,17 @@ export default function Home() {
       <div className="max-w-[1260px] mx-auto px-6 relative z-10">
         {/* Navigation */}
         <nav className="flex flex-col md:flex-row justify-between items-center py-6">
-          <div className="text-white font-bold text-2xl mb-4 md:mb-0">LOREM</div>
-          <div className="text-white/70 mb-4 md:mb-0">vector/ eps.10</div>
+          <div className="flex items-center gap-2 mb-4 md:mb-0">
+            <Search className="w-6 h-6 text-white" />
+            <div className="font-roboto text-white font-bold text-2xl">TrendFinder</div>
+          </div>
+          <div className="text-white/70 mb-4 md:mb-0"></div>
           <div className="flex flex-wrap gap-4 md:gap-8 text-white justify-center">
-            <a href="#" className="hover:text-white/80 transition">Shop</a>
-            <a href="#" className="hover:text-white/80 transition">Account</a>
-            <a href="#" className="hover:text-white/80 transition">Story</a>
-            <a href="#" className="hover:text-white/80 transition">Blog</a>
+            <a href="#" className="hover:text-white/80 transition">Trends</a>
+            <a href="#" className="hover:text-white/80 transition">Analytics</a>
+            <a href="#" className="hover:text-white/80 transition">Reports</a>
+            <a href="#" className="hover:text-white/80 transition">Dashboard</a>
+            <a href="#" className="hover:text-white/80 transition">Sign In</a>
           </div>
         </nav>
       </div>
@@ -59,9 +63,9 @@ export default function Home() {
           {/* Main Text Content */}
           <div className="space-y-8">
             <h1 className="text-5xl md:text-8xl font-bold">
-              <span className="text-[#B6B1FF]">WEB</span>
+              <span className="text-[#B6B1FF]">FIND WHAT'S</span>
               <br />
-              <span className="text-white">DESIGN</span>
+              <span className="text-white">TRENDING</span>
             </h1>
             <p className="text-white/80 max-w-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
@@ -77,7 +81,7 @@ export default function Home() {
         </div>
 
         {/* Right Side */}
-        <div className="col-span-1 md:col-span-5 relative">
+        {/* <div className="col-span-1 md:col-span-5 relative">
           <div className="absolute right-0 top-0 text-[60px] md:text-[120px] font-thin text-white/90">
             <span>02</span>
             <span className="ml-4">03</span>
@@ -105,7 +109,7 @@ export default function Home() {
               LOREM IPSUM
             </Button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Dots Pattern - Adjust for smaller screens */}
