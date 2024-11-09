@@ -118,6 +118,59 @@ export default function Home() {
           <div key={i} className="w-1 h-1 bg-white/10 rounded-full"></div>
         ))}
       </div>
+
+      {/* Add this after your Explore More button section */}
+      <div className="mt-20 max-w-[1260px] mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="rounded-xl border text-card-foreground shadow bg-white bg-opacity-10 backdrop-blur-md">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                Retail Giant Boosts Sales by 30%
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Implemented an AI-driven recommendation engine, resulting in a significant increase in cross-selling and upselling.
+              </p>
+              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background shadow-sm h-9 px-4 py-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 border-white hover:bg-white hover:text-black transition-colors duration-300">
+                Read More
+                <ArrowRight className="ml-2 h-4 w-4 text-white" />
+              </button>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="rounded-xl border text-card-foreground shadow bg-white bg-opacity-10 backdrop-blur-md">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                FinTech Startup Reduces Fraud by 60%
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Developed a machine learning model to detect and prevent fraudulent transactions in real-time.
+              </p>
+              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background shadow-sm h-9 px-4 py-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 border-white hover:bg-white hover:text-black transition-colors duration-300">
+                Read More
+                <ArrowRight className="ml-2 h-4 w-4 text-white" />
+              </button>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="rounded-xl border text-card-foreground shadow bg-white bg-opacity-10 backdrop-blur-md">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                Tech Company Optimizes Cloud Costs
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Implemented cloud optimization strategies resulting
+              </p>
+              <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background shadow-sm h-9 px-4 py-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 border-white hover:bg-white hover:text-black transition-colors duration-300">
+                Read More
+                <ArrowRight className="ml-2 h-4 w-4 text-white" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
